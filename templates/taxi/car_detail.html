@@ -2,8 +2,8 @@
 
 {% block content %}
   <h1>Car Detail
-    <a style="float: Right" href="{% url 'taxi:car_update' %}">UPDATE</a>
-    <a style="float: Right" href="{% url 'taxi:car_delete' %}">DELETE</a>
+    <a style="float: Right" href="{% url 'taxi:car_update' pk=car.id %}">UPDATE</a>
+    <a style="float: Right" href="{% url 'taxi:car_delete' pk=car.id %}">DELETE</a>
   </h1>
   <p>Manufacturer: ({{ car.manufacturer.name }}, {{ car.manufacturer.country }})</p>
   <h1>Drivers</h1>
